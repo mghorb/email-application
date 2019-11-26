@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/email_view"
+    android:padding="2dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/cv"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/emailPhoto"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:id="@+id/emailDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailSubject"
+                android:layout_toRightOf="@+id/emailPhoto"
+                android:layout_below="@+id/emailDate"
+                android:layout_alignParentTop="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailAuthor"
+                android:layout_toRightOf="@+id/emailPhoto"
+                android:layout_below="@+id/emailSubject"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="15dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/emailBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailAuthor"
+        android:layout_toRightOf="@+id/emailPhoto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:padding="5dp"
+        />
+    />
+
+</LinearLayout>
